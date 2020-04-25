@@ -1,0 +1,127 @@
+﻿<Page
+    x:Class="KitchenBook.Home"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:KitchenBook"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel
+            Margin="0,80,0,0"
+            Width="1500"
+            Height="40"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Background="#d0e7e0">
+            <CommandBar 
+                HorizontalAlignment="Right" 
+                Background="Transparent" 
+                DefaultLabelPosition="Right">
+                <AppBarButton Icon="Help" Label="Help"/>
+                <AppBarButton Icon="Cancel" Label="Exit"/>
+            </CommandBar>
+        </StackPanel>
+        <StackPanel
+            Width="220"
+            Height="160"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="50,0,0,0"
+            Background="#75c2b1"
+            Orientation="Vertical">
+            <TextBlock
+            Text="My" 
+                FontSize="50" 
+                FontFamily="Brush Script MT" TextAlignment="Center"
+                Foreground="White"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+            <TextBlock
+            Text="KitchenBook"
+                FontSize="50"
+                FontFamily="Brush Script MT" 
+                TextAlignment="Center"
+                 Foreground="White"
+                 HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+            <TextBlock
+                Text="Create | Cook"
+                Foreground="White"
+                FontSize="18"
+                TextAlignment="Center"/>
+        </StackPanel>
+        <StackPanel
+            x:Name="AddReceipePanel"
+            Width="220"
+            Height="300"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="50,220,0,0"
+            Orientation="Vertical">
+            <StackPanel.Background>
+                <SolidColorBrush Color="#FF75C2B1" Opacity="0.5"/>
+            </StackPanel.Background>
+            <Image
+                Width="200"
+                Height="200"
+                Source="Assets\Cook.jpg"
+                Margin="0,10,0,0"/>
+            <TextBlock
+                Text="Add Receipe"
+                Foreground="White"
+                FontSize="24"
+                TextAlignment="Center"
+                Margin="0,5,0,0"/>
+            <Button 
+                x:Name="NewRecipeButton"
+                Width="60"
+                FontSize="30"
+                Margin="0,5,0,0"
+                HorizontalAlignment="Center"
+                Background="Transparent"
+                Click="NewRecipeButton_Click">
+                <SymbolIcon 
+                    Symbol="Add"
+                    Foreground="White"/>
+            </Button>
+        </StackPanel>
+        <StackPanel
+            x:Name="AddCategoryPanel"
+            Width="220"
+            Height="300"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="300,220,0,0"
+            Orientation="Vertical">
+            <StackPanel.Background>
+                <SolidColorBrush Color="#FF75C2B1" Opacity="0.5"/>
+            </StackPanel.Background>
+            <Image
+                Width="200"
+                Height="200"
+                Source="Assets\Category.jpg"
+                Margin="0,10,0,0"/>
+            <TextBlock
+                Text="Add Category"
+                Foreground="White"
+                FontSize="24"
+                TextAlignment="Center"
+                Margin="0,5,0,0"/>
+            <Button 
+                x:Name="NewCategoryButton"
+                Width="60"
+                FontSize="30"
+                Margin="0,5,0,0"
+                HorizontalAlignment="Center"
+                Background="Transparent"
+                Click="NewCategoryButton_Click">
+                <SymbolIcon 
+                    Symbol="Add"
+                    Foreground="White"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>
